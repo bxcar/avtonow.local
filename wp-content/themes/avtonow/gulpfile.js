@@ -1,6 +1,6 @@
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
-    browserSync  = require('browser-sync'),
+    // browserSync  = require('browser-sync'),
     concat       = require('gulp-concat'),
     uglify       = require('gulp-uglifyjs'),
     cssnano      = require('gulp-cssnano'),
@@ -19,8 +19,8 @@ gulp.task('sass', function () {
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) //добавляем префиксы
         .pipe(cssnano())
         .pipe(gulp.dest('app/css')) //выгружаем в папку css
-        .pipe(gulp.dest('dist/css')) //выгружаем в папку css
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(gulp.dest('dist/css')); //выгружаем в папку css
+        // .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('scripts', function () {
@@ -43,6 +43,7 @@ gulp.task('css-libs', ['sass'], function () {
         .pipe(gulp.dest('app/css'));
 });
 
+/*
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
@@ -51,6 +52,7 @@ gulp.task('browser-sync', function () {
         notify: false
     });
 });
+*/
 
 gulp.task('clean' ,function () {
     return del.sync('dist');
@@ -71,12 +73,12 @@ gulp.task('img', function () {
         .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function () {
+gulp.task('watch', ['css-libs', 'scripts'], function () {
     gulp.watch('app/sass/**/*.scss', ['sass']);
     gulp.watch('app/sass/blocks/*.scss', ['sass']);
-    gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/**/*.js', browserSync.reload);
-    // gulp.watch('app/js/**/*.js');
+    // gulp.watch('app/*.html', browserSync.reload);
+    // gulp.watch('app/js/**/*.js', browserSync.reload);
+    gulp.watch('app/js/**/*.js');
 });
 
 gulp.task('build', ['img', 'sass', 'scripts'], function () {
@@ -93,8 +95,8 @@ gulp.task('build', ['img', 'sass', 'scripts'], function () {
     var buildJs = gulp.src('app/js/**/*')
         .pipe(gulp.dest('dist/js'));
 
-    var buildHtml = gulp.src('app/*.html')
-        .pipe(gulp.dest('dist'));
+    /*var buildHtml = gulp.src('app/!*.html')
+        .pipe(gulp.dest('dist'));*/
 });
 
 gulp.task('default', ['watch']);
