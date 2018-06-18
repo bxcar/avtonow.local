@@ -13,18 +13,17 @@
 <footer class="footer">
     <div class="footer__top">
         <div class="footer__top-container">
-            <span class="footer__title">По всем вопросам вы можете обращаться по нашим контактным телефонам.</span>
+            <span class="footer__title"><?php the_field('footer_title', 'option'); ?></span>
             <div class="footer__phone-map-wrapper">
                 <div class="footer__phone">
                     <img class="footer__phone-img" src="<?= get_template_directory_uri();?>/dist/img/white-tel.png"><!--
                 --><span class="footer__phone-number"><!--
-                --><span class="footer__phone-number-sub">(495)</span> 544 87 65</span><!--
-                --><span class="footer__phone-small-text">или написать по адресу: avtonow@mail.ru</span>
+                --><span class="footer__phone-number-sub"><?php the_field('footer_phone_part1', 'option'); ?></span> <?php the_field('footer_phone_part2', 'option'); ?></span><!--
+                --><span class="footer__phone-small-text"><?php the_field('footer_under_phone', 'option'); ?></span>
                 </div>
                 <div class="footer__location-wrapper">
                     <img class="footer__location-img" src="<?= get_template_directory_uri();?>/dist/img/location-marker.png">
-                    <span class="footer__address">метро Электрозаводская , ул.Фридриха Энгельса 75 корп<br>
-                20 офисный центр, офис 303</span>
+                    <span class="footer__address"><?php the_field('footer_address', 'option'); ?></span>
                 </div>
             </div>
         </div>
@@ -41,7 +40,7 @@
     </div>
     <div class="footer__bottom">
         <div class="footer__bottom-container">
-            <span class="footer__copyright">Аренда машин, аренда авто, аренда автомобиля, аренда автобуса Avtonow.ru</span>
+            <span class="footer__copyright"><?php the_field('footer_copyright', 'option'); ?></span>
         </div>
     </div>
 </footer>
