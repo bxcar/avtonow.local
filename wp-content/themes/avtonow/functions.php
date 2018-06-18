@@ -45,6 +45,7 @@ if ( ! function_exists( 'avtonow_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'avtonow' ),
+			'menu-2' => esc_html__( 'Sidebar-menu', 'avtonow' ),
 		) );
 
 		/*
@@ -159,3 +160,27 @@ add_action( 'wp_enqueue_scripts', 'avtonow_scripts' );
 	require get_template_directory() . '/inc/jetpack.php';
 }*/
 
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page(array(
+        'page_title' => 'Общие настройки',
+        'menu_title' => 'Общие настройки',
+        'menu_slug' => 'theme-general-settings',
+        'capability' => 'manage_options',
+        'redirect' => true
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' => 'Хедер',
+        'menu_title' => 'Хедер',
+        'menu_slug' => 'header',
+        'parent_slug' => 'theme-general-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' => 'Футер',
+        'menu_title' => 'Футер',
+        'menu_slug' => 'footer',
+        'parent_slug' => 'theme-general-settings',
+    ));
+}

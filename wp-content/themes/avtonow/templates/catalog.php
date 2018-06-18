@@ -1,11 +1,5 @@
 <?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package avtonow
- */
+/* Template Name: catalog */
 
 get_header();
 ?>
@@ -149,8 +143,8 @@ get_header();
                 </ul>
             </div>
             <div class="catalog-content">
-                <p class="catalog-content__breadcrumbs">Главная / Поиск</p>
-                <h1 class="catalog-content__title catalog-content__title--search">Результаты поиска по запросу "Заказ минивэнов"</h1>
+                <p class="catalog-content__breadcrumbs">Главная / Заказ минивэнов</p>
+                <h1 class="catalog-content__title">Заказ минивэнов</h1>
                 <div class="catalog-content__tile">
                     <img class="catalog-content__tile-img" src="img/catalog-img.png">
                     <div class="catalog-content__tile-desc">

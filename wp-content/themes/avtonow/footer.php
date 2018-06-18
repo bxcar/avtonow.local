@@ -16,13 +16,13 @@
             <span class="footer__title">По всем вопросам вы можете обращаться по нашим контактным телефонам.</span>
             <div class="footer__phone-map-wrapper">
                 <div class="footer__phone">
-                    <img class="footer__phone-img" src="img/white-tel.png"><!--
+                    <img class="footer__phone-img" src="<?= get_template_directory_uri();?>/dist/img/white-tel.png"><!--
                 --><span class="footer__phone-number"><!--
                 --><span class="footer__phone-number-sub">(495)</span> 544 87 65</span><!--
                 --><span class="footer__phone-small-text">или написать по адресу: avtonow@mail.ru</span>
                 </div>
                 <div class="footer__location-wrapper">
-                    <img class="footer__location-img" src="img/location-marker.png">
+                    <img class="footer__location-img" src="<?= get_template_directory_uri();?>/dist/img/location-marker.png">
                     <span class="footer__address">метро Электрозаводская , ул.Фридриха Энгельса 75 корп<br>
                 20 офисный центр, офис 303</span>
                 </div>

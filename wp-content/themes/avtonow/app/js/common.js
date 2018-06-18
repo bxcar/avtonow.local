@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#owl-slider").owlCarousel({
         items: 1,
         nav: true,
-        navText: ["<img src='img/left-arrow.png'>", "<img src='img/right-arrow.png'>"],
+        navText: ["<img src='/wp-content/themes/avtonow/dist/img/left-arrow.png'>", "<img src='/wp-content/themes/avtonow/dist/img/right-arrow.png'>"],
         responsive: {
             // breakpoint from 0 up
             0: {},
@@ -12,7 +12,7 @@ $(document).ready(function () {
             1350: {
                 items: 4,
                 nav: true,
-                navText: ["<img src='img/left-arrow.png'>", "<img src='img/right-arrow.png'>"]
+                navText: ["<img src='/wp-content/themes/avtonow/dist/img/left-arrow.png'>", "<img src='/wp-content/themes/avtonow/dist/img/right-arrow.png'>"]
             }
         }
 
@@ -47,4 +47,6 @@ $(document).ready(function () {
         $(this).css("display", "none");
         $("#header-search-form").css("display", "flex");
     });
+
+    $('.header__burger-main-menu .header__burger-link').unwrap();
 });
