@@ -83,12 +83,7 @@ get_header();
                         <span class="single-content__form-subtitle"><?php the_field('form_subtitle'); ?></span>
                         <span class="single-content__car-price-wrap"><?php the_field('form_subtitle_2_part1'); ?><!--
                     --><span class="single-content__car-price"> <?php the_field('form_subtitle_2_part2'); ?></span></span>
-                        <form class="single-content__form" action="/" method="post">
-                            <input class="single-content__form-input" type="text" name="name" placeholder="Ваше имя">
-                            <input class="single-content__form-input single-content__form-input--tel" type="tel"
-                                   name="phone" placeholder="Ваш телефон">
-                            <input class="single-content__form-submit" type="submit" value="Заказать">
-                        </form>
+                        <?php echo do_shortcode('[contact-form-7 id="5" html_class="single-content__form"]')?>
                     </div>
                 </div>
                 <div class="single-content__subimages owl-thumbs" data-slider-id="1">
@@ -105,12 +100,7 @@ get_header();
                     <span class="single-content__form-subtitle"><?php the_field('form_subtitle'); ?></span>
                     <span class="single-content__car-price-wrap"><?php the_field('form_subtitle_2_part1'); ?><!--
                     --><span class="single-content__car-price"> <?php the_field('form_subtitle_2_part2'); ?></span></span>
-                    <form class="single-content__form" action="/" method="post">
-                        <input class="single-content__form-input" type="text" name="name" placeholder="Ваше имя">
-                        <input class="single-content__form-input single-content__form-input--tel" type="tel"
-                               name="phone" placeholder="Ваш телефон">
-                        <input class="single-content__form-submit" type="submit" value="Заказать">
-                    </form>
+                    <?php echo do_shortcode('[contact-form-7 id="193" html_class="single-content__form"]')?>
                 </div>
 
                 <h2 class="single-content__subtitle single-content__subtitle--1"><?php the_field('rates_title'); ?></h2>

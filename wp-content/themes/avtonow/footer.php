@@ -29,14 +29,10 @@
         </div>
     </div>
     <div class="footer__form-wrap">
-        <span class="footer__form-title">Не нашил, что искали?</span>
-        <span class="footer__form-subtitle">Оставьте заявку и мы перезвоним вам через 30 секунд</span>
-        <form class="footer__form" action="/" method="post">
-            <input class="footer__form-input" type="text" name="name" placeholder="Ваше имя">
-            <input class="footer__form-input footer__form-input--tel" type="tel" name="phone" placeholder="Ваш телефон">
-            <input class="footer__form-submit" type="submit" value="Заказать">
-        </form>
-        <span class="footer__form-small-text">* Я даю согласие на обработку моих персональных данных</span>
+        <span class="footer__form-title"><?php the_field('footer_form_title', 'option'); ?></span>
+        <span class="footer__form-subtitle"><?php the_field('footer_form_subtitle', 'option'); ?></span>
+        <?php echo do_shortcode('[contact-form-7 id="194" html_class="footer__form"]')?>
+        <span class="footer__form-small-text"><?php the_field('footer_small_text_under_form', 'option'); ?></span>
     </div>
     <div class="footer__bottom">
         <div class="footer__bottom-container">
