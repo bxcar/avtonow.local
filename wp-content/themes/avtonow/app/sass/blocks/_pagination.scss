@@ -7,16 +7,37 @@
 .pagination__current,
 .pagination__inactive,
 .pagination__forward,
-.pagination__show-all {
+.pagination__show-all,
+.pagination .page-numbers {
   text-decoration: none;
 }
 
 .pagination__inactive,
 .pagination__separator,
-.pagination__show-all{
+.pagination__show-all,
+.pagination .page-numbers {
   color: #919aa3;
 }
 
-.pagination__forward {
+.pagination .page-numbers {
+  border-right: 2px solid #919aa3;
+  padding-right: 7px;
+  padding-left: 5px;
+  line-height: 16px;
+  display: inline-block;
+}
+
+.pagination .page-numbers.next {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.pagination__forward,
+.pagination .next {
   color: #5078a0;
+}
+
+.pagination .page-numbers.current {
+  color: #093da7;
 }
