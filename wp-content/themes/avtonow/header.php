@@ -65,10 +65,10 @@
             </div>
         </div>
         <div class="header__bottom">
-            <div class="header__logo">
+            <a href="/" class="header__logo">
                 <span class="header__logo-text header__logo-text--1"><?php the_field('header_logo_part1', 'option');?></span><!--
                 --><span class="header__logo-text header__logo-text--2"><?php the_field('header_logo_part2', 'option');?></span>
-            </div>
+            </a>
             <div class="header__phone">
                 <img class="header__phone-img" src="<?= get_template_directory_uri();?>/dist/img/tel-blue.png"><!--
                 --><span class="header__phone-number"><span

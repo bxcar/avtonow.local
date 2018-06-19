@@ -16,6 +16,7 @@
   margin-bottom: 15px;
   @include font('PT Sans', sans-serif, 36px, 1.2em, #082e55, 700);
   letter-spacing: .025em;
+  text-transform: uppercase;
 }
 
 .content-text ul,
