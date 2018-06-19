@@ -91,6 +91,7 @@ get_header();
                     while (have_posts()) {
                         the_post(); ?>
                         <div class="catalog-content__tile">
+                            <a class="catalog-content__tile-abs-link" href="<?php the_permalink(); ?>"></a>
                             <img class="catalog-content__tile-img" src="<?php the_post_thumbnail_url(); ?>">
                             <div class="catalog-content__tile-desc">
                                 <h2 class="catalog-content__tile-desc-title"><?php the_title(); ?></h2>

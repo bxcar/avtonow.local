@@ -28,6 +28,11 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  position: relative;
+}
+
+.catalog-content__tile-abs-link {
+  display: none;
 }
 
 .catalog-content__tile-img {
@@ -89,6 +94,15 @@
     max-width: 360px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .catalog-content__tile-abs-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .catalog-content__tile-desc-title {
